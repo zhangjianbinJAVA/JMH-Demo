@@ -204,6 +204,19 @@ SecondBenchmark.singleThreadBench   1000000  avgt   10  529.205 ± 15.662  us/op
 JMH 支持一些 profiler，可以显示等待时间和运行时间比，热点函数等。
 
 
+### 输出结果
+```
+ptions opt = new OptionsBuilder()
+                .include(App.class.getSimpleName())
+                .forks(1)
+                .resultFormat(ResultFormatType.JSON)
+                .result("file")
+                .build();
+```
+JMH另外一个比较重要的就是输出文件的分析，在配置中指定output就可以保存为json格式。
+然后借助一些分析工具，比如 http://jmh.morethan.io/
+
+
 ### JMH 参考教程
 http://tutorials.jenkov.com/java-performance/jmh.html
 
@@ -214,3 +227,5 @@ http://www.importnew.com/12548.html
 官网  http://openjdk.java.net/projects/code-tools/jmh/
 
 例子  http://hg.openjdk.java.net/code-tools/jmh/file/tip/jmh-samples/src/main/java/org/openjdk/jmh/samples/
+
+spring  https://caorong.github.io/2017/08/22/jmh-usage/
