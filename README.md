@@ -159,6 +159,7 @@ benchmark 所在的类的名字
 
 ### fork
 进行 fork 的次数。如果 fork 数是2的话，则 JMH 会 fork 出两个进程来进行测试。
+每个试验运行在单独的JVM进程中。也可以指定（额外的）JVM参数
 
 ### warmupIterations
 预热的迭代次数。
